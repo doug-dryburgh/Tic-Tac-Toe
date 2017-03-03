@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="description" content="My free code camp project to build a tic tac toe game.">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css"> </head>
+
+<body>
+    <div id="pageContainer" class="container">
+        <!--Game field-->
+        <div id="gameContainer" class="row">
+            <div id="title" class="col-xs-12">
+                <h1>Tic Tac Toe</h1> </div>
+            <div id="A1" class="gameSquare col-xs-4">
+                <h2></h2> </div>
+            <div id="B1" class="gameSquare col-xs-4">
+                <h2></h2></div>
+            <div id="C1" class="gameSquare col-xs-4">
+                <h2></h2></div>
+            <div id="A2" class="gameSquare col-xs-4">
+                <h2></h2></div>
+            <div id="B2" class="gameSquare col-xs-4">
+                <h2>X</h2></div>
+            <div id="C2" class="gameSquare col-xs-4">
+                <h2>O</h2></div>
+            <div id="A3" class="gameSquare col-xs-4">
+                <h2>X</h2></div>
+            <div id="B3" class="gameSquare col-xs-4">
+                <h2></h2></div>
+            <div id="C3" class="gameSquare col-xs-4">
+                <h2>O</h2></div>
+            <div class="col-xs-6"> <img id="compThink" src="images/thinkingSml.png">
+                <h3 id="turn">
+            </h3></div>
+            <div class="col-xs-6">
+                <h3 id="score"></h3></div>
+        </div>
+        <!--Piece selection-->
+        <div id="selection" class="row">
+            <h1>Tic Tac Toe</h1>
+            <h3>Difficulty:</h3>
+            <div id="noob" class="col-xs-6 selection">
+                <h3>Noob</h3></div>
+            <div id="medium" class="col-xs-6 selection difficulty">
+                <h3>Medium</h3></div>
+            <br>
+            <br>
+            <h3>Choose Your Weapon!</h3>
+            <div id="X" class="col-xs-6 selection">
+                <h2>X</h2></div>
+            <div id="O" class="col-xs-6 selection">
+                <h2>O</h2></div>
+        </div>
+        <!-- Play Again-->
+        <div id="playAgain" class="row">
+            <h1>Tic Tac Toe</h1>
+            <h3 id="win_loseMessage"></h3> <img id="win_loseFace">
+            <div id="anotherPlay">
+                <h3>Let's play again!</h3></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/js.js"></script>
+</body>
+
+</html>
