@@ -7,8 +7,8 @@ $(document).ready(function () {
     var squareChosen;
     var playerScore = 0;
     var computerScore = 0;
-    var playerTiles = ["C3", "C2"];
-    var computerTiles = ["B2", "A3"];
+    var playerTiles = [];
+    var computerTiles = [];
     var winningCombos = [["A1", "A2", "A3"], ["B1", "B2", "B3"], ["C1", "C2", "C3"], ["A1", "B1", "C1"], ["A2", "B2", "C2"], ["A3", "B3", "C3"], ["A1", "B2", "C3"], ["A3", "B2", "C1"]];
     var randomChoice = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3"];
     //PIECE SELECTION
@@ -90,9 +90,8 @@ $(document).ready(function () {
                 });
                 //IF COMP HAS 2 IN ROW WITH AN EMPTY SQUARE IT TAKES THAT SQUARE
                 if (comp2x.length < 2 && $("#" + comp2x + " > h2").html() === "") {
-                    squareChosen = comp2x;
+                    squareChosen = comp2x[0];
                     moveMade = true;
-                    console.log("going for the win");
                     break;
                 }
             }
@@ -103,9 +102,8 @@ $(document).ready(function () {
                         return playerTiles.indexOf(val) < 0;
                     });
                     if (player2x.length < 2 && $("#" + player2x + " > h2").html() === "") {
-                        squareChosen = player2x;
+                        squareChosen = player2x[0];
                         moveMade = true;
-                        console.log("going for the block");
                         break;
                     }
                 }
@@ -128,7 +126,6 @@ $(document).ready(function () {
             }
         }
         // execute this code last
-        console.log("computer chose square : " + squareChosen);
         computerTiles.push(squareChosen);
         $("h2", "#" + squareChosen).html(computerPiece);
         updateRandomChoice();
@@ -170,7 +167,6 @@ $(document).ready(function () {
         }
         else {
             tiles = computerTiles;
-            console.log("computer tiles are: " + tiles);
         }
         for (var i = 0; i < winningCombos.length; i++) {
             var remainingTiles = winningCombos[i].filter(function (val) {
