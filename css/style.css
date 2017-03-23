@@ -51,9 +51,6 @@
  }
  
  #selection {
-     width: 450px;
-     margin-left: auto;
-     margin-right: auto;
      margin-top: 20px;
      background-color: rgba(0, 0, 0, .85);
      border-radius: 20px;
@@ -73,9 +70,7 @@
  
  #playAgain {
      display: none;
-     width: 450px;
-     margin-left: auto;
-     margin-right: auto;
+     
      margin-top: 20px;
      background-color: rgba(0, 0, 0, .85);
      border-radius: 20px;
@@ -103,3 +98,20 @@
      margin-left: auto;
      margin-right: auto;
  }
+@media only screen and (max-width: 500px) {
+    #gameContainer {
+        width: 285px;
+    }
+    .gameSquare {
+        width: 95px;
+        height: 95px;
+    }
+    h2 {
+        font-size: 4em;
+    }
+    #playAgain > img {
+        height: 200px;
+        width: 200px;
+    }
+
+}
